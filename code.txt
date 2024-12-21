@@ -1,0 +1,21 @@
+START
+
+  DECLARE 5x5 array GRID
+
+  FOR each ROW in GRID (from 0 to 4)
+      DECLARE COUNT = 0  // Initialize count of '1's for the current row
+      
+      FOR each COLUMN in current ROW (from 0 to 4)
+          PRINT GRID[ROW][COLUMN], WITHOUT NEWLINE
+          
+          IF GRID[ROW][COLUMN] == 1 THEN
+              INCREMENT COUNT
+          END IF
+      END FOR
+      
+      PRINT NEWLINE
+      PRINT "Number of 1s in row ", ROW+1, " = ", COUNT
+  END FOR
+
+END
+
